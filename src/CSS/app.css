@@ -1,0 +1,56 @@
+.dialog {
+  width: 70vw;
+  padding: 20px;
+  margin: auto;
+  background-color: #f1f1f1;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  flex: 1;
+}
+
+.back-button {
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.dialog-row label {
+  margin-right: 10px;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid salmon;
+}
+
+.dialog-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.discard-button,
+.save-button {
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #4caf50;
+}
+.second {
+  display: flex;
+  justify-content: space-between;
+}
+select {
+  /* background-color: red; */
+  width: 100%;
+}
