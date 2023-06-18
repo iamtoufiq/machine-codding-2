@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./CSS/app.css";
 import DialogBox from "./components/DialogBox";
 import { Routes, Route } from "react-router-dom";
-import { IoMdAddCircle } from "react-icons/io";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Error from "./components/Error";
 import Card from "./components/Card";
 import ArchivePage from "./routes/ArchivePage";
@@ -27,6 +29,7 @@ function App() {
         <Route path="/archive" element={<ArchivePage />} />
         <Route path="/*" element={<Error />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 }

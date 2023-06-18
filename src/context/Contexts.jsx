@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { toast } from "react-toastify";
 const context = createContext();
 const Contexts = ({ children }) => {
   const [data, setData] = useState([]);
@@ -11,7 +12,9 @@ const Contexts = ({ children }) => {
       return currentData.id != ids;
     });
     setData([...updateData]);
+    toast("Wow so easy!");
   };
+
   // handle delete from archive
   const handleArchiveDelete = (ids) => {
     const updateData = archive.filter((currentData) => {

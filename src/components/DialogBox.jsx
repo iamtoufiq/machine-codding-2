@@ -10,7 +10,11 @@ const DialogBox = ({ closeDialog, datas, editedData }) => {
     editedData?.timeOfDay || "morning"
   );
   const [startDate, setStartDate] = useState(editedData?.startDate || "today");
-
+  const closethePopUp = () => {
+    // setTimeout(() => {
+    //   closeDialog();
+    // }, 500);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -125,7 +129,13 @@ const DialogBox = ({ closeDialog, datas, editedData }) => {
         </div>
         <div className="dialog-footer">
           <button className="discard-button">Discard</button>
-          <button className="save-button">Save</button>
+          <button
+            className="save-button"
+            onClick={closethePopUp}
+            disabled={name.length === 0}
+          >
+            Save
+          </button>
         </div>
         <button onClick={closeDialog}>{!!editedData ? "Home" : "Close"}</button>
       </div>
