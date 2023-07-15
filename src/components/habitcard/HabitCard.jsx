@@ -7,7 +7,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useLocation } from "react-router-dom";
 export const HabitCard = ({ habit }) => {
   const location = useLocation();
-  console.log(location?.pathname);
   const {
     setHabitSelected,
     setHabitDetails,
