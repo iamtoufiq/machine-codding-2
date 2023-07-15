@@ -28,7 +28,13 @@ export const HabitCard = ({ habit }) => {
 
   return (
     <>
-      <div className="habit-card">
+      <div
+        className="habit-card"
+        style={{
+          backgroundColor:
+            name?.length < 5 ? "green" : name?.length < 10 ? "yellow" : "red",
+        }}
+      >
         <div
           style={{ cursor: "pointer" }}
           onClick={() => {
