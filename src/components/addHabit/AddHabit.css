@@ -1,0 +1,58 @@
+.add-habit {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 0 40px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 5;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input,
+select {
+  padding: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.flex-display {
+  display: flex;
+  justify-content: space-between;
+}
+.color {
+  color: rgb(36, 36, 197);
+  font-weight: bold;
+}
+.x-icon {
+  position: relative;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 10px;
+  margin: 30px 0 10px;
+  cursor: pointer;
+  background-color: rgb(131, 131, 240);
+  font-size: 18px;
+}
+
+.add-btn:hover {
+  background-color: rgb(107, 107, 224);
+}

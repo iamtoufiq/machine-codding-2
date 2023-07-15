@@ -2,19 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import Contexts from "./context/Contexts";
 import { BrowserRouter } from "react-router-dom";
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import { HabitProvider } from "./context/HabitContext";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Contexts>
+      <HabitProvider>
         <App />
-      </Contexts>
+      </HabitProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
-
-reportWebVitals();

@@ -1,36 +1,19 @@
-import React, { useState } from "react";
-import "./CSS/app.css";
-import DialogBox from "./components/DialogBox";
-import { Routes, Route } from "react-router-dom";
-
-import { ToastContainer, toast } from "react-toastify";
+import { Route, Routes } from "react-router";
+import "./App.css";
+import { Home } from "./pages/home/Home";
+import { Archive } from "./pages/archive/Archive";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Error from "./components/Error";
-import Card from "./components/Card";
-import ArchivePage from "./routes/ArchivePage";
-import Navbar from "./components/Navbar";
+
 function App() {
-  const [showDialog, setShowDialog] = useState(false);
-
-  const openDialog = () => {
-    setShowDialog(true);
-  };
-
-  const closeDialog = () => {
-    setShowDialog(false);
-  };
-
   return (
-    <>
-      <Navbar />
-
+    <div className="App">
+      <ToastContainer position="bottom-right" autoClose={2000} />
       <Routes>
-        <Route path="/" element={<Card />} />
-        <Route path="/archive" element={<ArchivePage />} />
-        <Route path="/*" element={<Error />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/archived" element={<Archive />} />
       </Routes>
-      <ToastContainer />
-    </>
+    </div>
   );
 }
 
